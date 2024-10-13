@@ -89,7 +89,6 @@ public class Jugador {
     // Metodo toString()
     //----------------------------------------------------------------------
     
-    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

@@ -15,6 +15,7 @@ public class Football_Manager {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         // Test Constructores
         Jugador t1 = new Jugador();
         Jugador t2 = new Jugador("Jose", 21, 5, 80, 10);

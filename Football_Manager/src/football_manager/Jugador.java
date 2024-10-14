@@ -4,6 +4,8 @@
  */
 package football_manager;
 
+import java.util.Objects;
+
 /**
  *
  * @author jorup
@@ -86,7 +88,7 @@ public class Jugador {
     }
 
     //----------------------------------------------------------------------
-    // Metodo toString()
+    // Metodos
     //----------------------------------------------------------------------
     
     @Override
@@ -101,4 +103,44 @@ public class Jugador {
         sb.append('}');
         return sb.toString();
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.nombre);
+        hash = 67 * hash + this.edad;
+        hash = 67 * hash + this.dorsal;
+        hash = 67 * hash + this.valoracion;
+        hash = 67 * hash + this.energia;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Jugador other = (Jugador) obj;
+        if (this.edad != other.edad) {
+            return false;
+        }
+        if (this.dorsal != other.dorsal) {
+            return false;
+        }
+        if (this.valoracion != other.valoracion) {
+            return false;
+        }
+        if (this.energia != other.energia) {
+            return false;
+        }
+        return Objects.equals(this.nombre, other.nombre);
+    }
+    
+    
 }

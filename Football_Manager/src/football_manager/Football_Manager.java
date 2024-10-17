@@ -5,19 +5,18 @@
 package football_manager;
 
 
-
 /**
  *
  * @author jorup
  */
 
 public class Football_Manager {
-
+ 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here        
         // Test Constructores
         Jugador t1 = new Jugador();
         Jugador t2 = new Jugador("Jose", 21, 5, 80, 10);
@@ -52,5 +51,5 @@ public class Football_Manager {
         
         System.out.println(t1);
     }
-       
+  
 }

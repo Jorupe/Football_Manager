@@ -11,6 +11,7 @@ package football_manager;
  */
 public class Football_Manager {
 
+    
     /**
      * @param args the command line arguments
      */

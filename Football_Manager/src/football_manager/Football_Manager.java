@@ -4,6 +4,7 @@
  */
 package football_manager;
 
+import model.TipoJugador;
 
 /**
  *
@@ -20,7 +21,7 @@ public class Football_Manager {
         
         // Test Constructores
         Jugador t1 = new Jugador();
-        Jugador t2 = new Jugador("Jose", 21, 5, 80, 10);
+        Jugador t2 = new Jugador("Jose", 21, 5, 80, 10, TipoJugador.DEFENSA);
         Jugador t3 = new Jugador(t1);
         
         System.out.println(t1);

@@ -5,6 +5,7 @@
 package football_manager;
 
 import java.util.Objects;
+import model.TipoJugador;
 
 /**
  *
@@ -23,25 +24,27 @@ public class Jugador {
     private int dorsal;
     private int valoracion;
     private int energia;
+    private TipoJugador posicion;
     
     //----------------------------------------------------------------------
     // Constructors
     //----------------------------------------------------------------------
     
-    public Jugador(String nombre, int edad, int dorsal, int valoracion, int energia){
+    public Jugador(String nombre, int edad, int dorsal, int valoracion, int energia, TipoJugador posicion){
         this.nombre = nombre;
         this.edad = edad;
         this.dorsal = dorsal;
         this.valoracion = valoracion;
         this.energia = energia;
+        this.posicion = posicion;
     }
     
     public Jugador(){
-        this("Jugador por defecto", Edad_Min, 0, 0, Max_Energia);
+        this("Jugador por defecto", Edad_Min, 0, 0, Max_Energia, TipoJugador.DELANTERO);
     }
     
     public Jugador(Jugador otro){
-        this(otro.nombre, otro.edad, otro.dorsal, otro.valoracion, otro.energia);
+        this(otro.nombre, otro.edad, otro.dorsal, otro.valoracion, otro.energia, otro.posicion);
     }
     
     
@@ -86,6 +89,14 @@ public class Jugador {
     public void setEnergia(int energia){
         this.energia = energia;
     }
+    
+    public TipoJugador getPosicion(){
+        return posicion;
+    }
+    
+    public void setPosicion(TipoJugador posicion){
+        this.posicion = posicion;
+    }
 
     //----------------------------------------------------------------------
     // Metodos
@@ -100,6 +111,7 @@ public class Jugador {
         sb.append(", dorsal=").append(dorsal);
         sb.append(", valoracion=").append(valoracion);
         sb.append(", energia=").append(energia);
+        sb.append(", posicion=").append(posicion);
         sb.append('}');
         return sb.toString();
     }
@@ -137,6 +149,9 @@ public class Jugador {
             return false;
         }
         if (this.energia != other.energia) {
+            return false;
+        }
+        if (this.posicion != other.posicion) {
             return false;
         }
         return Objects.equals(this.nombre, other.nombre);

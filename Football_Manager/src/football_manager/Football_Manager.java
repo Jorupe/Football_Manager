@@ -20,6 +20,7 @@ public class Football_Manager {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+     
         
         // Test Constructores Jugador
         Jugador j1 = new Jugador();

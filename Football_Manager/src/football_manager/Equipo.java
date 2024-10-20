@@ -20,13 +20,13 @@ public class Equipo {
     
     private String nombre;
     private String entrenador;
-    private List<Jugador> jugadores;
+    private List<Jugador> jugadores = new ArrayList();
     
     
     //----------------------------------------------------------------------
     // Construtores
     //----------------------------------------------------------------------
-
+    
     public Equipo(String nombre, String entrenador, List<Jugador> jugadores) {
         this.nombre = nombre;
         this.entrenador = entrenador;
@@ -34,7 +34,7 @@ public class Equipo {
     }
     
     public Equipo(){
-        this("Nombre por defecto", "entrenador por defecto", new ArrayList<>());
+        this("Equipo por defecto", "Entrenador por defecto", new ArrayList<>());
     }
     
     public Equipo(Equipo otro) {

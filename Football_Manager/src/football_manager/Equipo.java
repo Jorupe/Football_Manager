@@ -20,17 +20,20 @@ public class Equipo {
     
     private String nombre;
     private String entrenador;
-    private List<Jugador> jugadores = new ArrayList();
+    private ArrayList<Jugador> jugadores = new ArrayList();
     
     
     //----------------------------------------------------------------------
     // Construtores
     //----------------------------------------------------------------------
     
-    public Equipo(String nombre, String entrenador, List<Jugador> jugadores) {
+    public Equipo(String nombre, String entrenador, ArrayList<Jugador> jugadores) {
         this.nombre = nombre;
         this.entrenador = entrenador;
         this.jugadores = new ArrayList<>(jugadores);
+        for (int i = 0; i < jugadores.size(); i++){
+            this.jugadores.add(jugadores.get(i));
+        }
     }
     
     public Equipo(){

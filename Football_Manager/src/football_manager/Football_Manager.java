@@ -23,6 +23,7 @@ public class Football_Manager {
      
         
         // Test Constructores Jugador
+        System.out.println("\nTest Constructores Jugador");
         Jugador j1 = new Jugador();
         Jugador j2 = new Jugador("Jose", 21, 5, 80, 10, TipoJugador.DEFENSA);
         Jugador j3 = new Jugador(j1);
@@ -32,8 +33,13 @@ public class Football_Manager {
         System.out.println(j3);
         
         // Test Constructores Equipo
+        System.out.println("\nTest Constructores Equipo");
         Equipo e1 = new Equipo();
-        Equipo e2 = new Equipo("Ceuta FC", "Guardiola", new ArrayList<>());
+        ArrayList jugadores1 = new ArrayList<Jugador>();
+        jugadores1.add(j1);
+        jugadores1.add(j2);
+        jugadores1.add(j3);
+        Equipo e2 = new Equipo("Ceuta FC", "Guardiola", jugadores1);
         Equipo e3 = new Equipo();
         
         System.out.println(e1);
@@ -42,6 +48,7 @@ public class Football_Manager {
         
         
         //Test getters & setters Jugador
+        System.out.println("\nTest getters & setters Jugador");
         System.out.println("Nombre: " + j1.getNombre());
         System.out.println("Edad: " + j1.getEdad());
         System.out.println("Dorsal: " + j1.getDorsal());
@@ -68,6 +75,7 @@ public class Football_Manager {
         
         
         //Test getters & setters Equipo
+        System.out.println("\nTest getters & setters Equipo");
         System.out.println("Equipo: " + e1.getNombre());
         System.out.println("Entrenador: " + e1.getEntrenador());
         System.out.println("Jugadores: " + e1.getJugadores());
@@ -84,6 +92,7 @@ public class Football_Manager {
         System.out.println("Jugadores: " + e1.getJugadores());
 
         //Test metodos Equipo
+        System.out.println("\nTest metodos Equipo");
         e2.agregarJugador(j1);
         e2.agregarJugador(j3);
         e2.agregarJugador(j2);

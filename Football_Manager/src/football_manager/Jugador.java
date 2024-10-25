@@ -15,13 +15,15 @@ public class Jugador {
     //----------------------------------------------------------------------
     // Attributes
     //----------------------------------------------------------------------
-    public static final int Edad_Min = 18;
-    public static final int Max_Valoracion = 100;
-    public static final int Max_Energia = 10;
+    public static final int EDAD_MINIMA = 18;
+    public static final int MAX_VALORACION = 100;
+    public static final int MIN_VALORACION = 0;
+    public static final int MAX_ENERGIA = 10;
+    public static final int MIN_ENERGIA = 0;
             
     private String nombre;
     private int edad;
-    private int dorsal;
+    private int dorsal; 
     private int valoracion;
     private int energia;
     private TipoJugador posicion;
@@ -40,7 +42,7 @@ public class Jugador {
     }
     
     public Jugador(){
-        this("Jugador por defecto", Edad_Min, 0, 0, Max_Energia, TipoJugador.DELANTERO);
+        this("Jugador por defecto", EDAD_MINIMA, MIN_VALORACION, 0, MAX_ENERGIA, TipoJugador.DELANTERO);
     }
     
     public Jugador(Jugador otro){

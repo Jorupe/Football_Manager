@@ -16,11 +16,13 @@ public class Equipo {
     //----------------------------------------------------------------------
     // Attributes
     //----------------------------------------------------------------------
-    public static final int  Max_Jugadores = 20;
+    public static final int  MAX_JUGADORES = 20;
     
     private String nombre;
     private String entrenador;
-    private ArrayList<Jugador> jugadores = new ArrayList();
+//    private ArrayList<Jugador> jugadores = new ArrayList();
+//    private ArrayList<Jugador> jugadores = new ArrayList(MAX_JUGADORES);
+    private ArrayList<Jugador> jugadores; 
     
     
     //----------------------------------------------------------------------
@@ -68,7 +70,7 @@ public class Equipo {
     }
     
     public void setJugadores(List<Jugador> jugadores){
-        if (jugadores.size() <= Max_Jugadores) {
+        if (jugadores.size() <= MAX_JUGADORES) {
             this.jugadores.clear();
             this.jugadores.addAll(jugadores);
         } else {
@@ -80,7 +82,7 @@ public class Equipo {
     // Métodos
     //----------------------------------------------------------------------
     public boolean agregarJugador(Jugador jugador) {
-        if (jugadores.size() < Max_Jugadores) {
+        if (jugadores.size() < MAX_JUGADORES) {
             return jugadores.add(jugador);
         } else {
             System.out.println("No se pueden añadir mas jugadores, has alcanzando el máximo permitido.");
